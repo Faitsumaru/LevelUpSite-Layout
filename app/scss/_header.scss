@@ -1,0 +1,147 @@
+header {
+    background-color: $darkPurpleColor;
+}
+
+nav {
+    overflow: hidden;
+}
+
+.navbar {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 24px 0;
+    align-items: center;
+
+    & > .logo {
+        img {
+            max-width: 100px;
+            border: 4px solid $yellowColor;
+            border-radius: 100%;
+            @media (max-width: $breakpoint992) {
+                max-width: 60px;
+            }
+        }
+    }
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    margin-right: 100px;
+    &__item {
+        margin-left: 50px;
+    }
+    &__item-link {
+        color: $whiteColor;
+        font-size: 18px;
+        line-height: 24px;
+        transition: all .4s ease-in-out;
+        &:hover {
+            color: $btnHoverColor;
+            text-shadow: 4px 4px 5px $btnHoverShadow;
+        }
+    }
+}
+
+//burger menu
+.burger-btn {
+    cursor: pointer;
+    display: none;
+}
+
+@media screen and (max-width: $burgerBreakpoint) {
+    .menu {
+        position: fixed;
+        background: $blackColor;
+        left: 0;
+        top: 0;
+        height: 100vh;
+        width: 100vw;
+        display: none;
+
+        &--active {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 15;
+            pointer-events: all;
+            left: 0;
+            top: 0;
+            height: 100vh;
+            width: 100vw;
+            opacity: .96;
+            animation: fade .4s linear;
+        }
+        &__item {
+            margin-left: 0;
+            padding: 30px 0;
+            &-link {
+                transition: all .4s ease-in-out;
+                    &:hover {
+                        color: $btnHoverColor;
+                        text-shadow: 2px 2px 4px $yellowColor;
+                    }
+            }
+        }
+    }
+
+    .burger-btn {
+        position: relative;
+        display: block;
+        height: 30px;
+        width: 40px;
+        z-index: 20;
+        cursor: pointer;
+
+        span {
+            position: absolute;
+            background: $yellowColor;
+            width: 100%;
+            height: 3px;
+            border-radius: 20%;
+            transform: scale(1);
+            transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) .4s all;
+            top: 13px;
+            right: 0;
+        }
+        &::before {
+            top: 0;
+        }
+        &::after {
+            bottom: 0;
+        }
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            background: $yellowColor;
+            width: 100%;
+            height: 3px;
+            border-right: 20%;
+            transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) .4s all;
+        }
+
+        &--active  {
+            & span {
+                transform: scale(0);
+            }
+            &::before,
+            &::after {
+                background-color: $whiteColor;
+                transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) .4s all;
+            }
+            &::before {
+                transform: rotate(45deg);
+                top: 13px;
+            }
+            &::after {
+                transform: rotate(-45deg);
+                bottom: 14px;
+            }
+        }
+
+
+    }
+}

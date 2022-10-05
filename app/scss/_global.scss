@@ -1,6 +1,11 @@
 html,
 body {
 	height: 100%;
+	font-family: 'Europe', sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 27px;
+	color: $grayColor;
 }
 
 .wrapper {
@@ -17,13 +22,29 @@ body {
 	flex: 0 0 auto;
 }
 
-.container{
-  max-width: 1200px;
+.container {
+  max-width: ($containerWidth + $containerPadding) + px; 
+  width: 100%;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 $containerSidePadding + px;
+
+  @media (max-width: $breakpoint992) {
+	max-width: 978px;
+  }
+
+  @media (max-width: $breakpoint768) {
+	max-width: 750px;
+  }
+
+  @media (max-width: $breakpoint488) {
+	max-width: none;
+  }
 }
 
-
-
-
-
+h1 {
+	font-weight: 700;
+	font-size: 48px;
+	line-height: 62px;
+	color: $yellowColor;
+	margin-bottom: 38px;
+}
