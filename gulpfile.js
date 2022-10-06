@@ -54,7 +54,10 @@ function scripts() { //linking js files func
 
 
 function styles() { //linking css files func
-  return src('app/scss/style.scss')
+  return src([
+    'app/scss/style.scss',
+    'node_modules/slick-carousel/slick/slick.scss'
+    ])
       .pipe(scss({outputStyle: 'compressed'})) //comressed files - .min files without any free-spaces
       .pipe(concat('style.min.css'))
       .pipe(autoprefixer({

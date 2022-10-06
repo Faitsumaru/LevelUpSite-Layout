@@ -4,13 +4,6 @@
 }
 
 .product {
-    &__title {
-        padding-bottom: 80px;
-
-        @media (max-width: $breakpoint488) {
-            padding-bottom: 40px;
-        }
-    }
     &__box {
         display: flex;
         justify-content: space-between;
