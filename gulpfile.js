@@ -44,6 +44,7 @@ function scripts() { //linking js files func
     'node_modules/slick-carousel/slick/slick.js',
     'node_modules/mixitup/dist/mixitup.js',
     'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
+    'node_modules/flipclock/dist/flipclock.js',
     'app/js/main.js'
   ])
     .pipe(concat('main.min.js'))
@@ -56,7 +57,8 @@ function scripts() { //linking js files func
 function styles() { //linking css files func
   return src([
     'app/scss/style.scss',
-    'node_modules/slick-carousel/slick/slick.scss'
+    'node_modules/slick-carousel/slick/slick.scss',
+    'node_modules/flipclock/dist/flipclock.css'
     ])
       .pipe(scss({outputStyle: 'compressed'})) //comressed files - .min files without any free-spaces
       .pipe(concat('style.min.css'))

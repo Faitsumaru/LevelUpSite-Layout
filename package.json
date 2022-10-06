@@ -23,6 +23,7 @@
     "slick-carousel": "^1.8.1"
   },
   "dependencies": {
+    "flipclock": "^0.10.8",
     "gulp-cli": "^2.3.0",
     "sass": "^1.49.9",
     "slick": "^1.12.2"
