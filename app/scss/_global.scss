@@ -42,18 +42,18 @@ body {
 }
 
 section {
-	padding: 75px 0 75px 0;
+	padding: 100px 0 100px 0;
 	
 	@media (max-width: $breakpoint992) {
-		padding: 65px 0 !important;
+		padding: 75px 0 !important;
 	}
 
 	@media (max-width: $breakpoint768) {
-		padding: 50px 0 !important;
+		padding: 60px 0 !important;
 	}
 
 	@media (max-width: $breakpoint488) {
-		padding: 40px 0 !important;
+		padding: 50px 0 !important;
 	}
 }
 

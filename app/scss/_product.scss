@@ -1,0 +1,204 @@
+.section__product {
+    background: rgb(22,0,51);
+    background: linear-gradient(180deg, rgba(22,0,51,1) 0%, rgba(154,77,255,1) 70%, rgba(177,128,255,1) 100%);
+}
+
+.product {
+    &__title {
+        padding-bottom: 80px;
+
+        @media (max-width: $breakpoint488) {
+            padding-bottom: 40px;
+        }
+    }
+    &__box {
+        display: flex;
+        justify-content: space-between;
+
+        @media (max-width: $breakpoint488) {
+            justify-content: space-around;
+            gap: 30px;
+        }
+    }
+    &__ingredients {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 60px;
+        &-item {
+            min-width: 100px;
+            img {
+                border: 3px solid $yellowColor;
+                border-radius: 100%;
+                width: 100px;
+                height: 100px;
+            }
+            text-align: center;
+            p {
+                color: $whiteColor;
+                padding-top: 10px;
+                line-height: 25px;
+            }
+        }
+
+        &-item__first {
+            &:nth-child(1) {
+                position: relative;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 150px;
+                    height: 4px;
+                    background-color: $yellowColor;
+                    top: 60%;
+                    bottom: 0;
+                    margin: auto 0;
+                    left: 160%;
+                    border-radius: 30%;
+                    transform: rotate(20deg);
+                    
+                    @media (max-width: $breakpoint992) {
+                        width: 100px;
+                        left: 110%;
+                    }
+                    @media (max-width: $breakpoint768) {
+                        width: 0;
+                    }
+                }
+            }
+            &:nth-child(2) {
+                position: relative;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 150px;
+                    height: 4px;
+                    background-color: $yellowColor;
+                    top: 0;
+                    bottom: 25%;
+                    margin: auto 0;
+                    left: 160%;
+                    border-radius: 30%;
+
+                    @media (max-width: $breakpoint992) {
+                        width: 100px;
+                        left: 110%;
+                    }
+	                @media (max-width: $breakpoint768) {
+                        width: 0;
+                    }
+
+                }
+            }
+            &:nth-child(3) {
+                position: relative;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 150px;
+                    height: 4px;
+                    background-color: $yellowColor;
+                    top: 0;
+                    bottom: 80%;
+                    margin: auto 0;
+                    left: 160%;
+                    border-radius: 30%;
+                    transform: rotate(-20deg);
+
+                    @media (max-width: $breakpoint992) {
+                        width: 100px;
+                        left: 110%;
+                    }
+                    @media (max-width: $breakpoint768) {
+                        width: 0;
+                    }
+                }
+            }
+        }
+        &-item__second {
+            &:nth-child(1) {
+                position: relative;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 150px;
+                    height: 4px;
+                    background-color: $yellowColor;
+                    top: 60%;
+                    bottom: 0;
+                    margin: auto 0;
+                    right: 160%;
+                    border-radius: 30%;
+                    transform: rotate(-20deg);
+
+                    @media (max-width: $breakpoint992) {
+                        width: 100px;
+                        right: 110%;
+                    }
+                    @media (max-width: $breakpoint768) {
+                        width: 0;
+                    }
+                }
+            }
+            &:nth-child(2) {
+                position: relative;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 150px;
+                    height: 4px;
+                    background-color: $yellowColor;
+                    top: 0;
+                    bottom: 25%;
+                    margin: auto 0;
+                    right: 160%;
+                    border-radius: 30%;
+
+                    @media (max-width: $breakpoint992) {
+                        width: 100px;
+                        right: 110%;
+                    }
+                    @media (max-width: $breakpoint768) {
+                        width: 0;
+                    }
+                }
+            }
+            &:nth-child(3) {
+                position: relative;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 150px;
+                    height: 4px;
+                    background-color: $yellowColor;
+                    top: 0;
+                    bottom: 80%;
+                    margin: auto 0;
+                    right: 160%;
+                    border-radius: 30%;
+                    transform: rotate(20deg);
+
+                    @media (max-width: $breakpoint992) {
+                        width: 100px;
+                        right: 110%;
+                    }
+                    @media (max-width: $breakpoint768) {
+                        width: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    &__img {
+        margin: 0 60px;
+        img {
+            transform: translateY(10%);
+        }
+
+        @media (max-width: $breakpoint488) {
+            margin: 0;
+            display: none;
+        }
+    }
+}
