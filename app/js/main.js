@@ -7,5 +7,6 @@ $(function () {
     $(".section__hero").load("./html/hero.html");
     $(".section__product").load("./html/product.html");
     $(".section__testimonials").load("./html/testimonials.html");
+    $(".section__promo").load("./html/promo.html");
 
 })

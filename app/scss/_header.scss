@@ -66,7 +66,6 @@ nav {
             align-items: center;
             justify-content: center;
             z-index: 15;
-            pointer-events: all;
             left: 0;
             top: 0;
             height: 100vh;
@@ -78,6 +77,7 @@ nav {
             margin-left: 0;
             padding: 30px 0;
             &-link {
+                font-size: 24px;
                 transition: all .4s ease-in-out;
                     &:hover {
                         color: $btnHoverColor;
@@ -122,8 +122,10 @@ nav {
             border-right: 20%;
             transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) .4s all;
         }
-
+        
         &--active  {
+            position: fixed;
+            right: 5%;
             & span {
                 transform: scale(0);
             }
