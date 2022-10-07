@@ -4,19 +4,31 @@ $(function () {
         dots: true,
         infinite: true,
         speed: 300,
-        slidesToShow: 3,
-        slidesToScroll: 3,
+        slidesToShow: 5,
+        slidesToScroll: 5,
         autoplay: true,
         autoplaySpeed: 8000,
         arrows: false,
         responsive: [
             {
+                breakpoint: 2250,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 3,
+                }
+            },
+            {
+                breakpoint: 1600,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                }
+            },
+            {
                 breakpoint: 1100,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 2,
-                    infinite: true,
-                    dots: true
                 }
             },
             {
